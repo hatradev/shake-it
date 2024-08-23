@@ -1,0 +1,76 @@
+{
+  "events": [
+    {
+      "id": "event1",
+      "name": "Summer Shaking Event",
+      "image": "https://s1.mzstatic.com/us/r30/Purple/v4/db/4a/c3/db4ac3d6-64ef-1bea-9c2e-f48e5b29022b/mzl.itlrenhu.png",
+      "startTime": "2024-08-01T00:00:00Z",
+      "endTime": "2024-08-31T23:59:59Z",
+      "description": "Shake to win now!",
+      "type": "shake",
+      "rules": "Shake your phone to win gifts",
+      "gifts": [
+        {
+          "voucherCode": "GIFT001",
+          "qrCode": "https://example.com/qr/gift001.png",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt9M91Oa0Op0PybZ3Iw56dwwwrYz9IYkbJWA&s",
+          "value": 100000,
+          "description": "Voucher 100,000 VNĐ",
+          "expirationDate": "2024-12-31T23:59:59Z",
+          "status": "active"
+        },
+        {
+          "voucherCode": "GIFT002",
+          "qrCode": "https://example.com/qr/gift002.png",
+          "image": "https://example.com/gift002.jpg",
+          "value": 50000,
+          "description": "Voucher 50,000 VNĐ",
+          "expirationDate": "2024-12-31T23:59:59Z",
+          "status": "active"
+        }
+      ]
+    },
+    {
+      "id": "event2",
+      "name": "Winter Wonderland Event",
+      "image": "https://example.com/event2.jpg",
+      "startTime": "2024-12-01T00:00:00Z",
+      "endTime": "2024-12-31T23:59:59Z",
+      "description": "Enjoy the winter festivities!",
+      "type": "quiz",
+      "rules": "Answer quiz questions to win gifts",
+      "gifts": [
+        {
+          "voucherCode": "GIFT003",
+          "qrCode": "https://example.com/qr/gift003.png",
+          "image": "https://example.com/gift003.jpg",
+          "value": 200000,
+          "description": "Voucher 200,000 VNĐ",
+          "expirationDate": "2025-01-15T23:59:59Z",
+          "status": "active"
+        }
+      ]
+    },
+    {
+      "id": "event3",
+      "name": "Spring Surprise Event",
+      "image": "https://example.com/event3.jpg",
+      "startTime": "2024-03-01T00:00:00Z",
+      "endTime": "2024-05-31T23:59:59Z",
+      "description": "Spring into action and win!",
+      "type": "scratch",
+      "rules": "Scratch and reveal to win gifts",
+      "gifts": [
+        {
+          "voucherCode": "GIFT004",
+          "qrCode": "https://example.com/qr/gift004.png",
+          "image": "https://example.com/gift004.jpg",
+          "value": 75000,
+          "description": "Voucher 75,000 VNĐ",
+          "expirationDate": "2024-06-30T23:59:59Z",
+          "status": "active"
+        }
+      ]
+    }
+  ]
+}

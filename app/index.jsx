@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Text, View, Image } from "react-native";
 import { Background, Button } from "../components";
-import { router } from "expo-router";
+import { router, Redirect } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { colors, images } from "../constants";
 import Animated, {
@@ -9,8 +9,14 @@ import Animated, {
   useAnimatedStyle,
   withTiming,
 } from "react-native-reanimated";
+import { useGlobalContext } from "../context";
+import { setUserId } from "../data";
 
 export default function App() {
+  const { loading, isLogged } = useGlobalContext();
+
+  if (!loading && isLogged) return <Redirect href="/home" />;
+
   const translateY = useSharedValue(300);
 
   useEffect(() => {
@@ -44,14 +50,17 @@ export default function App() {
                 color="primary"
                 title="Login"
                 containerStyles="w-full"
-                handlePress={() => router.push("/home")}
+                handlePress={() => {
+                  setUserId("66d6868afed0174f007b7e1a");
+                  router.push("/home");
+                }}
               />
               <Button
                 color="secondary"
                 type="outline"
                 title="Register"
                 containerStyles="mt-2 w-full"
-                handlePress={() => router.push("/home")}
+                // handlePress={() => router.push("/register")}
               />
             </View>
           </Animated.View>

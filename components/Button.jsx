@@ -68,7 +68,7 @@ const Button = ({
         {isLoading && (
           <ActivityIndicator
             animating={isLoading}
-            color="#fff"
+            color={colors.white}
             size="small"
             className="ml-2"
           />

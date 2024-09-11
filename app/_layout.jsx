@@ -2,6 +2,9 @@ import { StyleSheet, Text, View } from "react-native";
 import { Slot, SplashScreen, Stack } from "expo-router";
 import { useFonts } from "expo-font";
 import { useEffect } from "react";
+import { ApolloProvider } from "@apollo/client";
+import client from "../data";
+import GlobalProvider from "../context";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -30,10 +33,15 @@ const RootLayout = () => {
 
   if (!fontLoaded && !error) return null;
   return (
-    <Stack screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="(tabs)" />
-      <Stack.Screen name="index" />
-    </Stack>
+    <ApolloProvider client={client}>
+      <GlobalProvider>
+        <Stack screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="(tabs)" />
+          {/* <Stack.Screen name="(auth)" /> */}
+          <Stack.Screen name="index" />
+        </Stack>
+      </GlobalProvider>
+    </ApolloProvider>
   );
 };
 

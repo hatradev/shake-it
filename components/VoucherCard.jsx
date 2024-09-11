@@ -3,18 +3,12 @@ import { router } from "expo-router";
 import { images } from "../constants";
 import { formattedDate, idString } from "../utils";
 
-const GameCard = ({ gameId, image, title, startTime, endTime, brandId }) => {
-  const handlePress = () => {
-    router.push({
-      pathname: `/event/detail/${idString(gameId)}`,
-      params: { brandId },
-    });
-  };
+const VoucherCard = ({ id, image, title, description, handlePress }) => {
   return (
-    <View className="bg-white px-6">
+    <View className="px-6 mt-2">
       <TouchableOpacity
         onPress={handlePress}
-        className="border-2 border-neutral-90 px-1 py-2 rounded-3xl flex flex-row items-center"
+        className="bg-primary-95 border-2 border-neutral-90 px-1 py-2 rounded-3xl flex flex-row items-center"
         activeOpacity={0.7}
       >
         <Image
@@ -31,13 +25,11 @@ const GameCard = ({ gameId, image, title, startTime, endTime, brandId }) => {
           >
             {title}
           </Text>
-          <Text className="font-archivoRegular text-sm">{`${formattedDate(
-            startTime
-          )} - ${formattedDate(endTime)}`}</Text>
+          <Text className="font-archivoRegular text-sm">{description}</Text>
         </View>
       </TouchableOpacity>
     </View>
   );
 };
 
-export default GameCard;
+export default VoucherCard;

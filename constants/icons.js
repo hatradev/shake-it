@@ -16,6 +16,10 @@ import GiftShaking from "../assets/icons/GiftShaking.json";
 import OutlineTaskList from "../assets/icons/OutlineTaskList.png";
 import OutlineGift from "../assets/icons/OutlineGift.png";
 import SolidSetting from "../assets/icons/SolidSetting.png";
+import SolidEye from "../assets/icons/SolidEye.png";
+import SolidEyeHide from "../assets/icons/SolidEyeHide.png";
+import Facebook from "../assets/icons/Facebook.png";
+import Google from "../assets/icons/Google.png";
 
 export default {
   SolidHome,
@@ -34,4 +38,8 @@ export default {
   OutlineTaskList,
   OutlineGift,
   SolidSetting,
+  SolidEye,
+  SolidEyeHide,
+  Facebook,
+  Google,
 };
